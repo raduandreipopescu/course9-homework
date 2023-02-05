@@ -2,6 +2,8 @@ package homework9.exercise1;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Basket {
@@ -29,7 +31,12 @@ public class Basket {
     }
 
     public Collection<String> distinctFruits() {
-        return fruitsInBasket.stream().distinct().collect(Collectors.toList());
+        Set<String> distinctFruits = new HashSet<>();
+        for (String fruit : fruitsInBasket) {
+            distinctFruits.add(fruit);
+        }
+        return distinctFruits;
+//        return fruitsInBasket.stream().distinct().collect(Collectors.toList());
     }
 
     public void addFruit(String fruit) {

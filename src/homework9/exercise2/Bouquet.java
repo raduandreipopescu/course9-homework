@@ -12,7 +12,7 @@ public class Bouquet {
     }
 
     public Collection<String> getAllFlowers() {
-        return flowersInBouquet.stream().collect(Collectors.toList());
+        return flowersInBouquet;
     }
 
     public void addFlower(String flower) {
